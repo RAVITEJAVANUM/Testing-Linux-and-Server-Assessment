@@ -269,7 +269,7 @@ Output:
 
 #### Screenshot
 
-![Permission Denied](images/q2-permission-denied.png)
+![Permission Denied](Screenshots/q2-permission-denied.png)
 
 ---
 
@@ -301,7 +301,7 @@ This confirms the script is now executable.
 
 #### Screenshot
 
-![Execute Permission](images/q2-execute-permission.png)
+![Execute Permission](Screenshots/q2-execute-permission.png)
 
 ### Step 5: Run the Script Multiple Times
 
