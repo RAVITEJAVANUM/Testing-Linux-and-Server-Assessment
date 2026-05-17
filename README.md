@@ -490,27 +490,21 @@ Users `user1_rw` and `user2_rw` were added to the `writers` group and should hav
 su - user1_rw
 ```
 
-#### Test Read Access
-
-```bash
-cat /home/ec2-user/webapp/scripts/log_user.sh
-```
-
-The script contents were displayed successfully, confirming read access.
-
 #### Test Write Access
 
 ```bash
 echo "# Testing write access by $USER" >> /home/ec2-user/webapp/scripts/log_user.sh
 ```
 
-#### Verify Updated File Content
+The test entry was successfully appended, confirming write access.
+
+#### Verify Read Access
 
 ```bash
 cat /home/ec2-user/webapp/scripts/log_user.sh
 ```
 
-The test entry was successfully appended, confirming write access.
+The script contents were displayed successfully, confirming read access.
 
 #### Screenshots
 
@@ -529,15 +523,6 @@ Users `user3_r` and `user4_r` were not added to the `writers` group and should o
 ```bash
 su - user3_r
 ```
-
-#### Test Read Access
-
-```bash
-cat /home/ec2-user/webapp/scripts/log_user.sh
-```
-
-The script contents were displayed successfully, confirming read access.
-
 #### Attempt Write Access
 
 ```bash
@@ -551,6 +536,14 @@ Permission denied
 ```
 
 This confirms the user does not have write permission for the script.
+
+#### Verify Read Access
+
+```bash
+cat /home/ec2-user/webapp/scripts/log_user.sh
+```
+
+The script contents were displayed successfully, confirming read-only access.
 
 #### Screenshots
 
