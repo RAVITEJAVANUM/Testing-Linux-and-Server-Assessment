@@ -1,6 +1,12 @@
 # Testing, Linux and Server Assessment
 
-## Question 1: File Management and Permissions
+This project demonstrates Linux file management, permissions, ownership handling, and shell scripting using a Linux environment.
+
+---
+
+# Question 1: File Management and Permissions
+
+## Objective
 
 Create a complete project directory structure from scratch, apply correct permissions, and set ownership using Linux commands.
 
@@ -21,13 +27,13 @@ Create a complete project directory structure from scratch, apply correct permis
 
 ### Step 1: Create Directories
 
-## Command
+#### Command
 
 ```bash
 sudo mkdir -p /home/ec2-user/webapp/{scripts,logs,config}
 ```
 
-## Screenshot
+#### Screenshot
 
 ![Create Directories](images/create-directories.png)
 
@@ -35,13 +41,13 @@ sudo mkdir -p /home/ec2-user/webapp/{scripts,logs,config}
 
 ### Step 2: Create Configuration File
 
-## Command
+#### Command
 
 ```bash
 cat > /home/ec2-user/webapp/config/app.conf
 ```
 
-## Content Added
+#### Content Added
 
 ```text
 APP_NAME=WebApp
@@ -54,7 +60,7 @@ Save the file using:
 Ctrl + D
 ```
 
-## Screenshot
+#### Screenshot
 
 ![Create Config](images/create-config.png)
 
@@ -62,13 +68,13 @@ Ctrl + D
 
 ### Step 3: Create Empty Log File
 
-## Command
+#### Command
 
 ```bash
 touch /home/ec2-user/webapp/logs/app.log
 ```
 
-## Screenshot
+#### Screenshot
 
 ![Create Log File](images/create-log-file.png)
 
@@ -76,16 +82,16 @@ touch /home/ec2-user/webapp/logs/app.log
 
 ### Step 4: Set Permissions
 
-## Commands
+#### Commands
 
 ```bash
 chmod 755 /home/ec2-user/webapp/scripts
 chmod 644 /home/ec2-user/webapp/config/app.conf
 ```
 
-## Permission Explanation
+#### Permission Explanation
 
-### 755
+##### 755
 
 | User | Permission |
 |---|---|
@@ -93,7 +99,7 @@ chmod 644 /home/ec2-user/webapp/config/app.conf
 | Group | Read, Execute |
 | Others | Read, Execute |
 
-### 644
+##### 644
 
 | User | Permission |
 |---|---|
@@ -101,7 +107,7 @@ chmod 644 /home/ec2-user/webapp/config/app.conf
 | Group | Read |
 | Others | Read |
 
-## Screenshot
+#### Screenshot
 
 ![Set Permissions](images/set-permissions.png)
 
@@ -109,13 +115,13 @@ chmod 644 /home/ec2-user/webapp/config/app.conf
 
 ### Step 5: Change Ownership
 
-## Command
+#### Command
 
 ```bash
 sudo chown -R root:root /home/ec2-user/webapp/
 ```
 
-## Screenshot
+#### Screenshot
 
 ![Change Ownership](images/change-ownership.png)
 
@@ -123,13 +129,13 @@ sudo chown -R root:root /home/ec2-user/webapp/
 
 ### Step 6: Verify Final Structure
 
-## Command
+#### Command
 
 ```bash
 ls -lR /home/ec2-user/webapp/
 ```
 
-## Screenshot
+#### Screenshot
 
 ![Output Structure](images/output-structure.png)
 
@@ -143,19 +149,8 @@ total 0
 drwxr-xr-x 2 root root 22 May 17 config
 drwxr-xr-x 2 root root 21 May 17 logs
 drwxr-xr-x 2 root root  6 May 17 scripts
-
-/home/ec2-user/webapp/config:
-total 4
--rw-r--r-- 1 root root 30 May 17 app.conf
-
-/home/ec2-user/webapp/logs:
-total 0
--rw-r--r-- 1 root root 0 May 17 app.log
-
-/home/ec2-user/webapp/scripts:
-total 0
 ```
 
 ---
 
-## Question 2: Creating an Interactive Log Script
+# Question 2: Creating an Interactive Log Script
