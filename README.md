@@ -149,6 +149,17 @@ total 0
 drwxr-xr-x 2 root root 22 May 17 config
 drwxr-xr-x 2 root root 21 May 17 logs
 drwxr-xr-x 2 root root  6 May 17 scripts
+
+/home/ec2-user/webapp/config:
+total 4
+-rw-r--r-- 1 root root 30 May 17 app.conf
+
+/home/ec2-user/webapp/logs:
+total 0
+-rw-r--r-- 1 root root 0 May 17 app.log
+
+/home/ec2-user/webapp/scripts:
+total 0
 ```
 
 ---
