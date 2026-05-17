@@ -197,7 +197,7 @@ cd /home/ec2-user/webapp/scripts/
 
 #### Screenshot
 
-![Navigate Directory](images/q2-navigate-directory.png)
+![Navigate Directory](Screenshots/q2-navigate-directory.png)
 
 ---
 
@@ -219,7 +219,7 @@ to enter insert mode.
 
 #### Screenshot
 
-![Create Script](images/q2-create-script.png)
+![Create Script](Screenshots/q2-create-script.png)
 
 ---
 
@@ -247,7 +247,7 @@ Esc -> :wq
 
 #### Screenshot
 
-![Script Content](images/q2-script-content.png)
+![Script Content](Screenshots/q2-script-content.png)
 
 ---
 
@@ -261,7 +261,7 @@ chmod +x log_user.sh
 
 #### Screenshot
 
-![Execute Permission](images/q2-execute-permission.png)
+![Execute Permission](Screenshots/q2-execute-permission.png)
 
 ---
 
@@ -277,11 +277,11 @@ The script was executed 3 times using different usernames.
 
 #### Screenshots
 
-![Run Script 1](images/q2-run-script-1.png)
+![Run Script 1](Screenshots/q2-run-script-1.png)
 
-![Run Script 2](images/q2-run-script-2.png)
+![Run Script 2](Screenshots/q2-run-script-2.png)
 
-![Run Script 3](images/q2-run-script-3.png)
+![Run Script 3](Screenshots/q2-run-script-3.png)
 
 ---
 
@@ -295,7 +295,7 @@ cat /home/ec2-user/webapp/logs/app.log
 
 #### Screenshot
 
-![Final Log Output](images/q2-final-log-output.png)
+![Final Log Output](Screenshots/q2-final-log-output.png)
 
 ---
 
