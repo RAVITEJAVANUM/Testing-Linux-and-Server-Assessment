@@ -335,7 +335,7 @@ cat /home/ec2-user/webapp/logs/app.log
 ## Final Output
 
 ```text
-Login: ravi Date: Sat May 17 19:06:38 UTC 2026
-Login: teja Date: Sat May 17 19:08:10 UTC 2026
-Login: vanum Date: Sat May 17 19:08:34 UTC 2026
+Login: ravi Date: Sun May 17 19:06:38 UTC 2026
+Login: teja Date: Sun May 17 19:08:10 UTC 2026
+Login: vanum Date: Sun May 17 19:08:34 UTC 2026
 ```
