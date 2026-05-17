@@ -1,4 +1,4 @@
-
+![Directories](images/create-directories.png)
 
 
 - <img width="800"  alt="image" src="https://github.com/user-attachments/assets/26e867ce-a966-4b18-8ef1-c0a5ae4d148a" />
