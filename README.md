@@ -209,14 +209,6 @@ cd /home/ec2-user/webapp/scripts/
 vim log_user.sh
 ```
 
-Press:
-
-```text
-i
-```
-
-to enter insert mode.
-
 #### Screenshot
 
 ![Create Script](Screenshots/q2-create-script.png)
@@ -224,6 +216,14 @@ to enter insert mode.
 ---
 
 ### Step 3: Add Script Content
+
+Press:
+
+```text
+i
+```
+
+to enter insert mode.
 
 #### Script Content
 
