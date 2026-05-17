@@ -460,12 +460,6 @@ sudo chmod 664 log_user.sh
 ls -l log_user.sh
 ```
 
-Expected output:
-
-```text
--rw-rw-r-- 1 root writers 210 May 17 19:16 log_user.sh
-```
-
 #### Permission Breakdown
 
 | Permission | Meaning |
@@ -549,6 +543,31 @@ The script contents were displayed successfully, confirming read-only access.
 
 ![Read Only Access User3](Screenshots/q3-readonly-access-user3.png)
 
-![Read Only Access User4](Screenshots/q3-readonly-access-user4.png)
+- ![Read Only Access User4](Screenshots/q3-readonly-access-user4.png)
 
 ---
+
+# Technologies Used
+
+- Linux
+- Bash Scripting
+- File Permissions
+- Linux Groups & Users
+- Shell Commands
+- Vim Editor
+
+---
+
+# Repository Structure
+
+```text
+.
+├── README.md
+└── Screenshots/
+```
+
+---
+
+# Author
+
+Ravi Teja Vanum
