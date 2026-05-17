@@ -543,7 +543,21 @@ The script contents were displayed successfully, confirming read-only access.
 
 ![Read Only Access User3](Screenshots/q3-readonly-access-user3.png)
 
-- ![Read Only Access User4](Screenshots/q3-readonly-access-user4.png)
+![Read Only Access User4](Screenshots/q3-readonly-access-user4.png)
+
+---
+
+# Conclusion
+
+This assessment demonstrated practical Linux administration tasks including:
+
+- File and directory management
+- File permissions and ownership
+- Bash scripting
+- User and group management
+- Access control using Linux permissions
+
+All tasks were successfully completed and verified using command-line operations.
 
 ---
 
@@ -570,4 +584,6 @@ The script contents were displayed successfully, confirming read-only access.
 
 # Author
 
-Ravi Teja Vanum
+**Ravi Teja Vanum**
+
+GitHub: https://github.com/RAVITEJAVANUM
