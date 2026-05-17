@@ -360,10 +360,10 @@ The goal is:
 
 | User | Access Level |
 |---|---|
-| devuser1 | Read & Write |
-| devuser2 | Read & Write |
-| devuser3 | Read Only |
-| devuser4 | Read Only |
+| user1_rw | Read & Write |
+| user2_rw | Read & Write |
+| user3_r | Read Only |
+| user4_r | Read Only |
 
 ---
 
@@ -386,16 +386,16 @@ sudo groupadd writers
 #### Commands
 
 ```bash
-sudo useradd -m devuser1
-sudo useradd -m devuser2
-sudo useradd -m devuser3
-sudo useradd -m devuser4
+sudo useradd -m user1_rw
+sudo useradd -m user2_rw
+sudo useradd -m user3_r
+sudo useradd -m user4_r
 ```
 
 #### Verify Users
 
 ```bash
-cat /etc/passwd | grep devuser
+cat /etc/passwd | grep user
 ```
 
 #### Screenshot
@@ -409,15 +409,15 @@ cat /etc/passwd | grep devuser
 #### Commands
 
 ```bash
-sudo usermod -aG writers devuser1
-sudo usermod -aG writers devuser2
+sudo usermod -aG writers user1_rw
+sudo usermod -aG writers user2_rw
 ```
 
 #### Verify Group Membership
 
 ```bash
-groups devuser1
-groups devuser2
+groups user1_rw
+groups user2_rw
 ```
 
 #### Screenshot
@@ -431,13 +431,13 @@ groups devuser2
 #### Command
 
 ```bash
-sudo chown root:writers /home/ec2-user/webapp/scripts/log_user.sh
+sudo chown root:writers log_user.sh
 ```
 
 #### Verify Ownership
 
 ```bash
-ls -l /home/ec2-user/webapp/scripts/log_user.sh
+ls -l log_user.sh
 ```
 
 #### Screenshot
@@ -451,13 +451,13 @@ ls -l /home/ec2-user/webapp/scripts/log_user.sh
 #### Command
 
 ```bash
-sudo chmod 664 /home/ec2-user/webapp/scripts/log_user.sh
+sudo chmod 664 log_user.sh
 ```
 
 #### Verify Permissions
 
 ```bash
-ls -l /home/ec2-user/webapp/scripts/log_user.sh
+ls -l log_user.sh
 ```
 
 Expected output:
@@ -485,7 +485,7 @@ Expected output:
 #### Switch to User
 
 ```bash
-su - devuser1
+su - user1_rw
 ```
 
 #### Test Write Access
@@ -505,7 +505,7 @@ echo "test entry" >> /home/ec2-user/webapp/scripts/log_user.sh
 #### Switch to User
 
 ```bash
-su - devuser3
+su - user3_r
 ```
 
 #### Attempt Write Access
