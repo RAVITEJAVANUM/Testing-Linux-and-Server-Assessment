@@ -463,7 +463,7 @@ ls -l log_user.sh
 Expected output:
 
 ```text
--rw-rw-r-- 1 root writers log_user.sh
+-rw-rw-r-- 1 root writers 210 May 17 19:16 log_user.sh
 ```
 
 #### Permission Breakdown
