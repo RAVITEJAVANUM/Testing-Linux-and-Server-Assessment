@@ -1,6 +1,6 @@
-# Linux File Management Assignment
+# Testing, Linux and Server Assessment
 
-## Objective
+## Question 1: File Management and Permissions
 
 Create a complete project directory structure from scratch, apply correct permissions, and set ownership using Linux commands.
 
@@ -158,16 +158,4 @@ total 0
 
 ---
 
-# Technologies Used
-
-- Linux
-- AWS EC2
-- File Permissions
-- Ownership Management
-- Bash Commands
-
----
-
-# Author
-
-Ravi Teja
+## Question 2: Creating an Interactive Log Script
