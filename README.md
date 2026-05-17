@@ -480,29 +480,49 @@ Expected output:
 
 ---
 
-### Step 6: Test Write & Read Access for user1_rw and user2_rw
+### Step 6: Verify Read & Write Access for Writers Group
 
-#### Switch to User1
+Users `user1_rw` and `user2_rw` were added to the `writers` group and should have both read and write access to the `log_user.sh` script.
+
+#### Switch to User
 
 ```bash
 su - user1_rw
 ```
 
+#### Test Read Access
+
+```bash
+cat /home/ec2-user/webapp/scripts/log_user.sh
+```
+
+The script contents were displayed successfully, confirming read access.
+
 #### Test Write Access
 
 ```bash
-echo "test entry" >> /home/ec2-user/webapp/scripts/log_user.sh
+echo "# Testing write access by $USER" >> /home/ec2-user/webapp/scripts/log_user.sh
 ```
 
-#### Screenshot
+#### Verify Updated File Content
 
-![ReadWrite Access](Screenshots/q3-readwrite-access-user1.png)
+```bash
+cat /home/ec2-user/webapp/scripts/log_user.sh
+```
 
-![ReadWrite Access](Screenshots/q3-readwrite-access-user2.png)
+The test entry was successfully appended, confirming write access.
+
+#### Screenshots
+
+![ReadWrite Access User1](Screenshots/q3-readwrite-access-user1.png)
+
+![ReadWrite Access User2](Screenshots/q3-readwrite-access-user2.png)
 
 ---
 
-### Step 7: Test Read-Only Access
+### Step 7: Verify Read-Only Access for Other Users
+
+Users `user3_r` and `user4_r` were not added to the `writers` group and should only have read access.
 
 #### Switch to User
 
@@ -510,41 +530,32 @@ echo "test entry" >> /home/ec2-user/webapp/scripts/log_user.sh
 su - user3_r
 ```
 
+#### Test Read Access
+
+```bash
+cat /home/ec2-user/webapp/scripts/log_user.sh
+```
+
+The script contents were displayed successfully, confirming read access.
+
 #### Attempt Write Access
 
 ```bash
-echo "#Testing" >> /home/ec2-user/webapp/scripts/log_user.sh
+echo "# Testing write access by $USER" >> /home/ec2-user/webapp/scripts/log_user.sh
 ```
 
-Expected result:
+#### Expected Output
 
 ```text
 Permission denied
 ```
 
+This confirms the user does not have write permission for the script.
 
-#### Screenshot
+#### Screenshots
 
-![Read Only Access](Screenshots/q3-readonly-access-user3.png)
+![Read Only Access User3](Screenshots/q3-readonly-access-user3.png)
 
-![Read Only Access](Screenshots/q3-readonly-access-user4.png)
+![Read Only Access User4](Screenshots/q3-readonly-access-user4.png)
 
 ---
-
-## Final Verification
-
-#### Command
-
-```bash
-ls -l /home/ec2-user/webapp/scripts/log_user.sh
-```
-
-#### Final Output
-
-```text
--rw-rw-r-- 1 root writers 210 May 17 19:16 log_user.sh
-```
-
-#### Screenshot
-
-![Final Verification](Screenshots/q3-final-verification.png)
