@@ -480,9 +480,9 @@ Expected output:
 
 ---
 
-### Step 6: Test Write Access
+### Step 6: Test Write & Read Access for user1_rw and user2_rw
 
-#### Switch to User
+#### Switch to User1
 
 ```bash
 su - user1_rw
@@ -496,7 +496,9 @@ echo "test entry" >> /home/ec2-user/webapp/scripts/log_user.sh
 
 #### Screenshot
 
-![Write Access Test](Screenshots/q3-write-access.png)
+![ReadWrite Access](Screenshots/q3-readwrite-access-user1.png)
+
+![ReadWrite Access](Screenshots/q3-readwrite-access-user2.png)
 
 ---
 
@@ -511,7 +513,7 @@ su - user3_r
 #### Attempt Write Access
 
 ```bash
-echo "test entry" >> /home/ec2-user/webapp/scripts/log_user.sh
+echo "#Testing" >> /home/ec2-user/webapp/scripts/log_user.sh
 ```
 
 Expected result:
@@ -520,9 +522,12 @@ Expected result:
 Permission denied
 ```
 
+
 #### Screenshot
 
-![Read Only Access](Screenshots/q3-readonly-access.png)
+![Read Only Access](Screenshots/q3-readonly-access-user3.png)
+
+![Read Only Access](Screenshots/q3-readonly-access-user4.png)
 
 ---
 
