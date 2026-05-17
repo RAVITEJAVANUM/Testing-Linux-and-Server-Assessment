@@ -296,7 +296,7 @@ This confirms the script is now executable.
 
 #### Screenshot
 
-![Execute Permission](images/q2-execute-permission.png)
+![Execute Permission](Screenshots/q2-execute-permission.png)
 
 ### Step 5: Run the Script Multiple Times
 
@@ -335,7 +335,7 @@ cat /home/ec2-user/webapp/logs/app.log
 ## Final Output
 
 ```text
-Login: Chirag Date: Sat May 17 20:10:15 UTC 2026
-Login: Priya Date: Sat May 17 20:11:03 UTC 2026
-Login: Ravi Date: Sat May 17 20:12:44 UTC 2026
+Login: ravi Date: Sat May 17 19:06:38 UTC 2026
+Login: teja Date: Sat May 17 19:08:10 UTC 2026
+Login: vanum Date: Sat May 17 19:08:34 UTC 2026
 ```
