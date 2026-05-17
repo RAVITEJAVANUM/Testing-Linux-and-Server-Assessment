@@ -76,17 +76,11 @@ touch /home/ec2-user/webapp/logs/app.log
 ls -l /home/ec2-user/webapp/logs/app.log
 ```
 
-#### Expected Output
-
-```text
--rw-r--r-- 1 root root 0 May 17 app.log
-```
-
-The `0` confirms the file is empty (0 bytes).
-
 #### Screenshot
 
 ![Create Log File](images/create-log-file.png)
+
+The `0` confirms the file is empty (0 bytes).
 
 ### Step 4: Set Permissions
 
