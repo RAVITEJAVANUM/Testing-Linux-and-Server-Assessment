@@ -253,39 +253,19 @@ Esc -> :wq
 
 ### Step 4: Give Execute Permission
 
-Initially, the script could not be executed because execute permission was not assigned.
-
-#### Error Message
-
-```bash
-./log_user.sh
-```
-
-Output:
-
-```text
--bash: ./log_user.sh: Permission denied
-```
-
-#### Screenshot
-
-![Permission Denied](Screenshots/q2-permission-denied.png)
-
----
-
-#### Grant Execute Permission
+#### Command
 
 ```bash
 chmod +x log_user.sh
 ```
 
-#### Verify Updated Permissions
+#### Verify Execute Permission
 
 ```bash
 ls -l
 ```
 
-Permissions changed from:
+After applying execute permission, the file permissions changed from:
 
 ```text
 -rw-r--r-- 1 ravi ravi 210 May 17 19:16 log_user.sh
