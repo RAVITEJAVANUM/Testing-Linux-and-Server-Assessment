@@ -35,7 +35,7 @@ sudo mkdir -p /home/ec2-user/webapp/{scripts,logs,config}
 
 #### Screenshot
 
-![Create Directories](images/q1-create-directories.png)
+![Create Directories](Screenshots/q1-create-directories.png)
 
 ---
 
@@ -62,7 +62,7 @@ Ctrl + D
 
 #### Screenshot
 
-![Create Config](images/q1-create-config.png)
+![Create Config](Screenshots/q1-create-config.png)
 
 ---
 
@@ -78,7 +78,7 @@ ls -l /home/ec2-user/webapp/logs/app.log
 
 #### Screenshot
 
-![Create Log File](images/q1-create-log-file.png)
+![Create Log File](Screenshots/q1-create-log-file.png)
 
 The `0` confirms the file is empty (0 bytes).
 
@@ -111,7 +111,7 @@ chmod 644 /home/ec2-user/webapp/config/app.conf
 
 #### Screenshot
 
-![Set Permissions](images/q1-set-permissions.png)
+![Set Permissions](Screenshots/q1-set-permissions.png)
 
 ---
 
@@ -125,7 +125,7 @@ sudo chown -R root:root /home/ec2-user/webapp/
 
 #### Screenshot
 
-![Change Ownership](images/q1-change-ownership.png)
+![Change Ownership](Screenshots/q1-change-ownership.png)
 
 ---
 
@@ -139,7 +139,7 @@ ls -lR /home/ec2-user/webapp/
 
 #### Screenshot
 
-![Output Structure](images/q1-output-structure.png)
+![Output Structure](Screenshots/q1-output-structure.png)
 
 ---
 
