@@ -6,7 +6,7 @@ Create a complete project directory structure from scratch, apply correct permis
 
 ---
 
-# Project Structure
+## Project Structure
 
 ```text
 /home/ec2-user/webapp/
@@ -19,7 +19,7 @@ Create a complete project directory structure from scratch, apply correct permis
 
 ---
 
-# Step 1: Create Directories
+### Step 1: Create Directories
 
 ## Command
 
@@ -33,7 +33,7 @@ sudo mkdir -p /home/ec2-user/webapp/{scripts,logs,config}
 
 ---
 
-# Step 2: Create Configuration File
+### Step 2: Create Configuration File
 
 ## Command
 
@@ -60,7 +60,7 @@ Ctrl + D
 
 ---
 
-# Step 3: Create Empty Log File
+### Step 3: Create Empty Log File
 
 ## Command
 
@@ -74,7 +74,7 @@ touch /home/ec2-user/webapp/logs/app.log
 
 ---
 
-# Step 4: Set Permissions
+### Step 4: Set Permissions
 
 ## Commands
 
@@ -107,7 +107,7 @@ chmod 644 /home/ec2-user/webapp/config/app.conf
 
 ---
 
-# Step 5: Change Ownership
+### Step 5: Change Ownership
 
 ## Command
 
@@ -121,7 +121,7 @@ sudo chown -R root:root /home/ec2-user/webapp/
 
 ---
 
-# Step 6: Verify Final Structure
+### Step 6: Verify Final Structure
 
 ## Command
 
@@ -135,7 +135,7 @@ ls -lR /home/ec2-user/webapp/
 
 ---
 
-# Final Output
+## Final Output
 
 ```text
 /home/ec2-user/webapp:
