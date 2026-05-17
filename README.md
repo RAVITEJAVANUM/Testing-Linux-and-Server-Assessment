@@ -167,3 +167,142 @@ total 0
 ---
 
 # Question 2: Creating an Interactive Log Script
+
+## Objective
+
+Using the `webapp/` structure from Question 1, create a bash script that:
+
+- Takes user input
+- Reads configuration data from `app.conf`
+- Writes timestamped log entries
+- Displays the log file contents
+
+---
+
+## Script Location
+
+```text
+/home/ec2-user/webapp/scripts/log_user.sh
+```
+
+---
+
+### Step 1: Navigate to Scripts Directory
+
+#### Command
+
+```bash
+cd /home/ec2-user/webapp/scripts/
+```
+
+#### Screenshot
+
+![Navigate Directory](images/q2-navigate-directory.png)
+
+---
+
+### Step 2: Create Script File Using Vim
+
+#### Command
+
+```bash
+vim log_user.sh
+```
+
+Press:
+
+```text
+i
+```
+
+to enter insert mode.
+
+#### Screenshot
+
+![Create Script](images/q2-create-script.png)
+
+---
+
+### Step 3: Add Script Content
+
+#### Script Content
+
+```bash
+#!/bin/bash
+
+read -p "Enter your name: " username
+
+cat /home/ec2-user/webapp/config/app.conf
+
+echo "Login: $username Date: $(date)" >> /home/ec2-user/webapp/logs/app.log
+
+cat /home/ec2-user/webapp/logs/app.log
+```
+
+Save and exit using:
+
+```text
+Esc -> :wq
+```
+
+#### Screenshot
+
+![Script Content](images/q2-script-content.png)
+
+---
+
+### Step 4: Give Execute Permission
+
+#### Command
+
+```bash
+chmod +x log_user.sh
+```
+
+#### Screenshot
+
+![Execute Permission](images/q2-execute-permission.png)
+
+---
+
+### Step 5: Run the Script Multiple Times
+
+#### Command
+
+```bash
+./log_user.sh
+```
+
+The script was executed 3 times using different usernames.
+
+#### Screenshots
+
+![Run Script 1](images/q2-run-script-1.png)
+
+![Run Script 2](images/q2-run-script-2.png)
+
+![Run Script 3](images/q2-run-script-3.png)
+
+---
+
+### Step 6: Verify Log File Entries
+
+#### Command
+
+```bash
+cat /home/ec2-user/webapp/logs/app.log
+```
+
+#### Screenshot
+
+![Final Log Output](images/q2-final-log-output.png)
+
+---
+
+## Final Output
+
+```text
+Login: Chirag Date: Sat May 17 20:10:15 UTC 2026
+Login: Priya Date: Sat May 17 20:11:03 UTC 2026
+Login: Ravi Date: Sat May 17 20:12:44 UTC 2026
+```
