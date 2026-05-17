@@ -339,3 +339,207 @@ Login: ravi Date: Sun May 17 19:06:38 UTC 2026
 Login: teja Date: Sun May 17 19:08:10 UTC 2026
 Login: vanum Date: Sun May 17 19:08:34 UTC 2026
 ```
+
+---
+
+# Question 3: User Groups and File Permissions
+
+## Objective
+
+Create Linux users and groups to control access to the `log_user.sh` script created in Question 2.
+
+The goal is:
+
+- Two users should have write access
+- Two users should have read-only access
+- Access control should be managed using Linux groups and permissions
+
+---
+
+## Access Requirements
+
+| User | Access Level |
+|---|---|
+| devuser1 | Read & Write |
+| devuser2 | Read & Write |
+| devuser3 | Read Only |
+| devuser4 | Read Only |
+
+---
+
+### Step 1: Create Writers Group
+
+#### Command
+
+```bash
+sudo groupadd writers
+```
+
+#### Screenshot
+
+![Create Group](Screenshots/q3-create-group.png)
+
+---
+
+### Step 2: Create Users
+
+#### Commands
+
+```bash
+sudo useradd -m devuser1
+sudo useradd -m devuser2
+sudo useradd -m devuser3
+sudo useradd -m devuser4
+```
+
+#### Verify Users
+
+```bash
+cat /etc/passwd | grep devuser
+```
+
+#### Screenshot
+
+![Create Users](Screenshots/q3-create-users.png)
+
+---
+
+### Step 3: Add Users to Writers Group
+
+#### Commands
+
+```bash
+sudo usermod -aG writers devuser1
+sudo usermod -aG writers devuser2
+```
+
+#### Verify Group Membership
+
+```bash
+groups devuser1
+groups devuser2
+```
+
+#### Screenshot
+
+![Add Users to Group](Screenshots/q3-add-users-group.png)
+
+---
+
+### Step 4: Change Group Ownership of Script
+
+#### Command
+
+```bash
+sudo chown root:writers /home/ec2-user/webapp/scripts/log_user.sh
+```
+
+#### Verify Ownership
+
+```bash
+ls -l /home/ec2-user/webapp/scripts/log_user.sh
+```
+
+#### Screenshot
+
+![Change Ownership](Screenshots/q3-change-ownership.png)
+
+---
+
+### Step 5: Set File Permissions
+
+#### Command
+
+```bash
+sudo chmod 664 /home/ec2-user/webapp/scripts/log_user.sh
+```
+
+#### Verify Permissions
+
+```bash
+ls -l /home/ec2-user/webapp/scripts/log_user.sh
+```
+
+Expected output:
+
+```text
+-rw-rw-r-- 1 root writers log_user.sh
+```
+
+#### Permission Breakdown
+
+| Permission | Meaning |
+|---|---|
+| Owner (6) | Read & Write |
+| Group (6) | Read & Write |
+| Others (4) | Read Only |
+
+#### Screenshot
+
+![Set Permissions](Screenshots/q3-set-permissions.png)
+
+---
+
+### Step 6: Test Write Access
+
+#### Switch to User
+
+```bash
+su - devuser1
+```
+
+#### Test Write Access
+
+```bash
+echo "test entry" >> /home/ec2-user/webapp/scripts/log_user.sh
+```
+
+#### Screenshot
+
+![Write Access Test](Screenshots/q3-write-access.png)
+
+---
+
+### Step 7: Test Read-Only Access
+
+#### Switch to User
+
+```bash
+su - devuser3
+```
+
+#### Attempt Write Access
+
+```bash
+echo "test entry" >> /home/ec2-user/webapp/scripts/log_user.sh
+```
+
+Expected result:
+
+```text
+Permission denied
+```
+
+#### Screenshot
+
+![Read Only Access](Screenshots/q3-readonly-access.png)
+
+---
+
+## Final Verification
+
+#### Command
+
+```bash
+ls -l /home/ec2-user/webapp/scripts/log_user.sh
+```
+
+#### Final Output
+
+```text
+-rw-rw-r-- 1 root writers 210 May 17 19:16 log_user.sh
+```
+
+#### Screenshot
+
+![Final Verification](Screenshots/q3-final-verification.png)
