@@ -147,7 +147,7 @@ ls -lR /home/ec2-user/webapp/
 
 ```text
 /home/ec2-user/webapp:
-total 0
+total 12
 drwxr-xr-x 2 root root 22 May 17 config
 drwxr-xr-x 2 root root 21 May 17 logs
 drwxr-xr-x 2 root root  6 May 17 scripts
